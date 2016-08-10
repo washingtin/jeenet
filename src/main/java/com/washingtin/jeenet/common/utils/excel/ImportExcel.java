@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
- */
 package com.washingtin.jeenet.common.utils.excel;
 
 import java.io.File;
@@ -14,6 +11,9 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
+import com.washingtin.jeenet.common.utils.Reflections;
+import com.washingtin.jeenet.common.utils.excel.annotation.ExcelField;
+import com.washingtin.jeenet.modules.sys.utils.DictUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -24,9 +24,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.common.collect.Lists;
-import com.thinkgem.jeesite.common.utils.Reflections;
-import com.thinkgem.jeesite.common.utils.excel.annotation.ExcelField;
-import com.thinkgem.jeesite.modules.sys.utils.DictUtils;
 
 /**
  * 导入Excel文件（支持“XLS”和“XLSX”格式）
@@ -54,7 +51,7 @@ public class ImportExcel {
 	
 	/**
 	 * 构造函数
-	 * @param path 导入文件，读取第一个工作表
+	 * @param fileName 导入文件，读取第一个工作表
 	 * @param headerNum 标题行号，数据行号=标题行号+1
 	 * @throws InvalidFormatException 
 	 * @throws IOException 
@@ -66,7 +63,7 @@ public class ImportExcel {
 	
 	/**
 	 * 构造函数
-	 * @param path 导入文件对象，读取第一个工作表
+	 * @param file 导入文件对象，读取第一个工作表
 	 * @param headerNum 标题行号，数据行号=标题行号+1
 	 * @throws InvalidFormatException 
 	 * @throws IOException 
@@ -78,7 +75,7 @@ public class ImportExcel {
 
 	/**
 	 * 构造函数
-	 * @param path 导入文件
+	 * @param fileName 导入文件
 	 * @param headerNum 标题行号，数据行号=标题行号+1
 	 * @param sheetIndex 工作表编号
 	 * @throws InvalidFormatException 
@@ -91,7 +88,7 @@ public class ImportExcel {
 	
 	/**
 	 * 构造函数
-	 * @param path 导入文件对象
+	 * @param file 导入文件对象
 	 * @param headerNum 标题行号，数据行号=标题行号+1
 	 * @param sheetIndex 工作表编号
 	 * @throws InvalidFormatException 
@@ -104,7 +101,7 @@ public class ImportExcel {
 	
 	/**
 	 * 构造函数
-	 * @param file 导入文件对象
+	 * @param multipartFile 导入文件对象
 	 * @param headerNum 标题行号，数据行号=标题行号+1
 	 * @param sheetIndex 工作表编号
 	 * @throws InvalidFormatException 
@@ -117,7 +114,7 @@ public class ImportExcel {
 
 	/**
 	 * 构造函数
-	 * @param path 导入文件对象
+	 * @param fileName 导入文件对象
 	 * @param headerNum 标题行号，数据行号=标题行号+1
 	 * @param sheetIndex 工作表编号
 	 * @throws InvalidFormatException 

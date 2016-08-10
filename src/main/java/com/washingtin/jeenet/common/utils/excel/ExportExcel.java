@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
- */
 package com.washingtin.jeenet.common.utils.excel;
 
 import java.io.FileNotFoundException;
@@ -13,6 +10,10 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.washingtin.jeenet.common.utils.Encodes;
+import com.washingtin.jeenet.common.utils.Reflections;
+import com.washingtin.jeenet.common.utils.excel.annotation.ExcelField;
+import com.washingtin.jeenet.modules.sys.utils.DictUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -23,15 +24,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
-import com.thinkgem.jeesite.common.utils.Encodes;
-import com.thinkgem.jeesite.common.utils.Reflections;
-import com.thinkgem.jeesite.common.utils.excel.annotation.ExcelField;
-import com.thinkgem.jeesite.modules.sys.utils.DictUtils;
 
 /**
  * 导出Excel文件（导出“XLSX”格式，支持大数据量导出   @see org.apache.poi.ss.SpreadsheetVersion）
- * @author ThinkGem
- * @version 2013-04-21
+ * @author jeenet
  */
 public class ExportExcel {
 	
@@ -401,14 +397,14 @@ public class ExportExcel {
 	public ExportExcel write(HttpServletResponse response, String fileName) throws IOException{
 		response.reset();
         response.setContentType("application/octet-stream; charset=utf-8");
-        response.setHeader("Content-Disposition", "attachment; filename="+Encodes.urlEncode(fileName));
+        response.setHeader("Content-Disposition", "attachment; filename="+ Encodes.urlEncode(fileName));
 		write(response.getOutputStream());
 		return this;
 	}
 	
 	/**
 	 * 输出到文件
-	 * @param fileName 输出文件名
+	 * @param name 输出文件名
 	 */
 	public ExportExcel writeFile(String name) throws FileNotFoundException, IOException{
 		FileOutputStream os = new FileOutputStream(name);

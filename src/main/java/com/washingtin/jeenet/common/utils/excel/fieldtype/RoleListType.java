@@ -7,6 +7,7 @@ import com.washingtin.jeenet.common.utils.Collections3;
 import com.washingtin.jeenet.common.utils.SpringContextHolder;
 import com.washingtin.jeenet.common.utils.StringUtils;
 import com.washingtin.jeenet.modules.sys.entity.Role;
+import com.washingtin.jeenet.modules.sys.service.SystemService;
 
 /**
  * 字段类型转换

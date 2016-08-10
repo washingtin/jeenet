@@ -2,6 +2,7 @@ package com.washingtin.jeenet.common.utils.excel.fieldtype;
 
 import com.washingtin.jeenet.common.utils.StringUtils;
 import com.washingtin.jeenet.modules.sys.entity.Area;
+import com.washingtin.jeenet.modules.sys.utils.UserUtils;
 
 /**
  * 字段类型转换
