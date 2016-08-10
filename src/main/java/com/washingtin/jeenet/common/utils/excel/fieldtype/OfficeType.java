@@ -3,9 +3,8 @@
  */
 package com.washingtin.jeenet.common.utils.excel.fieldtype;
 
-import com.thinkgem.jeesite.common.utils.StringUtils;
-import com.thinkgem.jeesite.modules.sys.entity.Office;
-import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
+import com.washingtin.jeenet.common.utils.StringUtils;
+import com.washingtin.jeenet.modules.sys.entity.Office;
 
 /**
  * 字段类型转换

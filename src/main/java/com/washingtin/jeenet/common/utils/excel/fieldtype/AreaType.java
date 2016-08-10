@@ -1,5 +1,8 @@
 package com.washingtin.jeenet.common.utils.excel.fieldtype;
 
+import com.washingtin.jeenet.common.utils.StringUtils;
+import com.washingtin.jeenet.modules.sys.entity.Area;
+
 /**
  * 字段类型转换
  * @author jeenet
