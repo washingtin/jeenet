@@ -1,6 +1,8 @@
 package com.washingtin.jeenet.modules.sys.entity;
 
 import com.google.common.collect.Lists;
+import com.washingtin.jeenet.common.config.Global;
+import com.washingtin.jeenet.common.persistence.DataEntity;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.Length;
 
@@ -42,7 +44,7 @@ public class Role extends DataEntity<Role> {
     public Role() {
         super();
         this.dataScope = DATA_SCOPE_SELF;
-        this.useable=Global.YES;
+        this.useable= Global.YES;
     }
 
     public Role(String id){

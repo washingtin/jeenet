@@ -3,6 +3,12 @@ package com.washingtin.jeenet.modules.sys.entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Lists;
+import com.washingtin.jeenet.common.config.Global;
+import com.washingtin.jeenet.common.persistence.DataEntity;
+import com.washingtin.jeenet.common.supcan.annotation.treelist.cols.SupCol;
+import com.washingtin.jeenet.common.utils.Collections3;
+import com.washingtin.jeenet.common.utils.excel.annotation.ExcelField;
+import com.washingtin.jeenet.common.utils.excel.fieldtype.RoleListType;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
