@@ -541,8 +541,7 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
      * @param file 文件
      * @param zouts 输出流
      */
-    public static void zipFilesToZipFile(String dirPath, File file,
-                                         ZipOutputStream zouts) {
+    public static void zipFilesToZipFile(String dirPath, File file, ZipOutputStream zouts) {
         FileInputStream fin = null;
         ZipEntry entry = null;
         // 创建复制缓冲区

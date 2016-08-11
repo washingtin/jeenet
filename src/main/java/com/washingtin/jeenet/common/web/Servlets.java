@@ -3,6 +3,8 @@ package com.washingtin.jeenet.common.web;
 import com.google.common.net.HttpHeaders;
 import com.washingtin.jeenet.common.config.Global;
 import com.washingtin.jeenet.common.utils.Encodes;
+import com.washingtin.jeenet.modules.sys.security.SystemAuthorizingRealm;
+import com.washingtin.jeenet.modules.sys.utils.UserUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -198,7 +200,7 @@ public class Servlets {
 
         String accept = request.getHeader("accept");
         String xRequestedWith = request.getHeader("X-Requested-With");
-        Principal principal = UserUtils.getPrincipal();
+        SystemAuthorizingRealm.Principal principal = UserUtils.getPrincipal();
 
         // 如果是异步请求或是手机端，则直接返回信息
         return ((accept != null && accept.indexOf("application/json") != -1

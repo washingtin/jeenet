@@ -3,7 +3,11 @@ package com.washingtin.jeenet.common.persistence;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Maps;
 import com.washingtin.jeenet.common.config.Global;
+import com.washingtin.jeenet.common.supcan.annotation.treelist.SupTreeList;
+import com.washingtin.jeenet.common.supcan.annotation.treelist.cols.SupCol;
+import com.washingtin.jeenet.common.utils.StringUtils;
 import com.washingtin.jeenet.modules.sys.entity.User;
+import com.washingtin.jeenet.modules.sys.utils.UserUtils;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import javax.xml.bind.annotation.XmlTransient;

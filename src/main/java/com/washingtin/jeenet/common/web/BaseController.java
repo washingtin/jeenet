@@ -1,7 +1,7 @@
 package com.washingtin.jeenet.common.web;
 
 import com.washingtin.jeenet.common.beanvalidator.BeanValidators;
-import com.washingtin.jeenet.common.mapper.adapters.JsonMapper;
+import com.washingtin.jeenet.common.mapper.JsonMapper;
 import com.washingtin.jeenet.common.utils.DateUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -107,7 +107,8 @@ public abstract class BaseController {
 
     /**
      * 添加Model消息
-     * @param message
+     * @param model
+     * @param messages
      */
     protected void addMessage(Model model, String... messages) {
         StringBuilder sb = new StringBuilder();
@@ -119,7 +120,7 @@ public abstract class BaseController {
 
     /**
      * 添加Flash消息
-     * @param message
+     * @param messages
      */
     protected void addMessage(RedirectAttributes redirectAttributes, String... messages) {
         StringBuilder sb = new StringBuilder();

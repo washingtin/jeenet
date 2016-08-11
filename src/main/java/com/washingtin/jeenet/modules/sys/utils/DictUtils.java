@@ -2,7 +2,7 @@ package com.washingtin.jeenet.modules.sys.utils;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.washingtin.jeenet.common.mapper.adapters.JsonMapper;
+import com.washingtin.jeenet.common.mapper.JsonMapper;
 import com.washingtin.jeenet.common.utils.CacheUtils;
 import com.washingtin.jeenet.common.utils.SpringContextHolder;
 import com.washingtin.jeenet.modules.sys.dao.DictDao;
