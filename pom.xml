@@ -22,7 +22,7 @@
     <ehcache-web.version>2.0.4</ehcache-web.version>
     <shiro.version>1.2.3</shiro.version>
     <sitemesh.version>2.4.2</sitemesh.version>
-    <activiti.version>5.15.1</activiti.version>
+    <activiti.version>5.16</activiti.version>
 
     <!-- tools version setting -->
     <slf4j.version>1.7.7</slf4j.version>
@@ -58,15 +58,27 @@
 
     <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址.
     <repository>
-        <id>nexus-repos</id>
-        <name>Team Nexus Repository</name>
-        <url>http://192.168.1.254:8081/nexus/content/groups/public</url>
+       <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://118.192.22.167:8081/nexus/content/groups/public</url>
     </repository> -->
+
+    <repository>
+      <id>nexus</id>
+      <name>public nexus</name>
+      <url>http://118.192.22.167:8081/nexus/content/groups/public</url>
+    </repository>
 
     <repository>
       <id>oschina-repos</id>
       <name>Oschina Releases</name>
       <url>http://maven.oschina.net/content/groups/public</url>
+    </repository>
+
+    <repository>
+      <id>maven-restlet</id>
+      <name>Public online Restlet repository</name>
+      <url>http://maven.restlet.org</url>
     </repository>
 
     <repository>
@@ -246,12 +258,7 @@
       <version>${mysql.driver.version}</version>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>com.oracle</groupId>
-      <artifactId>ojdbc14</artifactId>
-      <version>${oracle.driver.version}</version>
-      <scope>runtime</scope>
-    </dependency>
+
     <dependency>
       <groupId>net.sourceforge.jtds</groupId>
       <artifactId>jtds</artifactId>

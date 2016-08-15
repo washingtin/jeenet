@@ -94,10 +94,8 @@
 	</bean>
 	
 	<!-- 定义授权缓存管理器 -->
-<!-- 	<bean id="shiroCacheManager" class="com.washingtin.jeenet.common.security.shiro.cache.SessionCacheManager" /> -->
-	<bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
-		<!--<property name="cacheManager" ref="cacheManager"/>-->
-	</bean>
+	<!--<bean id="shiroCacheManager" class="com.washingtin.jeenet.common.security.shiro.cache.SessionCacheManager" />-->
+	<bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager" />
 	
 	<!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
 	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
