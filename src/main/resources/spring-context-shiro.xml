@@ -29,6 +29,7 @@
 	</bean>
 	
 	<!-- 安全认证过滤器 -->
+	<bean id="formAuthenticationFilter" class="com.washingtin.jeenet.modules.sys.security.FormAuthenticationFilter" />
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" /><!-- 
 		<property name="loginUrl" value="${cas.server.url}?service=${cas.project.url}${adminPath}/cas" /> -->
@@ -51,6 +52,7 @@
 	</bean>
 	
 	<!-- 定义Shiro安全管理配置 -->
+	<bean id="systemAuthorizingRealm" class="com.washingtin.jeenet.modules.sys.security.SystemAuthorizingRealm" />
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<property name="realm" ref="systemAuthorizingRealm" />
 		<property name="sessionManager" ref="sessionManager" />
@@ -84,6 +86,7 @@
 <!-- 		<property name="sessionIdGenerator" ref="idGen" /> -->
 <!-- 		<property name="sessionKeyPrefix" value="${redis.keyPrefix}_session_" /> -->
 <!-- 	</bean> -->
+	<bean id="idGen" class="com.washingtin.jeenet.common.utils.IdGen" />
 	<bean id="sessionDAO" class="com.washingtin.jeenet.common.security.shiro.session.CacheSessionDAO">
 		<property name="sessionIdGenerator" ref="idGen" />
 		<property name="activeSessionsCacheName" value="activeSessionsCache" />
@@ -93,7 +96,7 @@
 	<!-- 定义授权缓存管理器 -->
 <!-- 	<bean id="shiroCacheManager" class="com.washingtin.jeenet.common.security.shiro.cache.SessionCacheManager" /> -->
 	<bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
-		<property name="cacheManager" ref="cacheManager"/>
+		<!--<property name="cacheManager" ref="cacheManager"/>-->
 	</bean>
 	
 	<!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
