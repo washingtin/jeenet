@@ -8,6 +8,7 @@ import org.apache.tools.zip.ZipFile;
 import org.apache.tools.zip.ZipOutputStream;
 
 import java.io.*;
+import java.util.Enumeration;
 
 /**
  * 描述：文件操作工具类
