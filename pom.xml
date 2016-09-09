@@ -63,10 +63,16 @@
       <url>http://118.192.22.167:8081/nexus/content/groups/public</url>
     </repository> -->
 
-    <repository>
+    <!--<repository>
       <id>nexus</id>
       <name>public nexus</name>
       <url>http://118.192.22.167:8081/nexus/content/groups/public</url>
+    </repository>-->
+
+    <repository>
+      <id>central-repos2</id>
+      <name>Central Repository 2</name>
+      <url>http://repo1.maven.org/maven2/</url>
     </repository>
 
     <repository>
@@ -99,11 +105,7 @@
       <url>http://repo.maven.apache.org/maven2</url>
     </repository>
 
-    <repository>
-      <id>central-repos2</id>
-      <name>Central Repository 2</name>
-      <url>http://repo1.maven.org/maven2/</url>
-    </repository>
+
 
     <repository>
       <id>activiti-repos</id>
@@ -579,7 +581,7 @@
     <dependency>
       <groupId>com.ckfinder</groupId>
       <artifactId>apache-ant-zip</artifactId>
-      <version>1.8.0</version>
+      <version>2.3</version>
     </dependency>
 
     <dependency>
