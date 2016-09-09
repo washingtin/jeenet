@@ -143,7 +143,7 @@ public class SupcanController extends BaseController {
 
     /**
      * 将分组转换为树结构
-     * @param list
+     * @param colList
      * @param groupMap
      * @param parentId
      */
