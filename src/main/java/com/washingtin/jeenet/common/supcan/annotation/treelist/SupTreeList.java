@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
- */
 package com.washingtin.jeenet.common.supcan.annotation.treelist;
 
 import com.washingtin.jeenet.common.supcan.annotation.common.fonts.SupFont;
